@@ -1,12 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 #define SIZE 10
 
 int main(void){
-    int V[SIZE] = {10,9,8,7,6,5,4,3,2,1}, aux;
+    srand(time(NULL));
+
+    int V[SIZE], aux;
     int contComparacao = 0;
     int contTroca = 0;
 
-
+    for(int i = 0; i < SIZE; i++){
+        V[i]= rand()%100;
+    }
+    
     printf("Array original: ");
     for(int i = 0; i < SIZE; i++){
         printf("%d ", V[i]);
