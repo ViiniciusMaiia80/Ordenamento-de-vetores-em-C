@@ -29,5 +29,7 @@ int main(void){
         printf("%d ", V[i]);
     }
 
+    printf("\nQtd de comparacoes: %d\nQtde de trocas: %d", contComparacao, contTroca);
+
     return 0;
 }
