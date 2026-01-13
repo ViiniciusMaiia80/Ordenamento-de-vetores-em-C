@@ -7,7 +7,7 @@
 int main(void){
     srand(time(NULL));
 
-    int V[SIZE], aux;
+    int V[SIZE], aux, troca = 0;
     int contComparacao = 0;
     int contTroca = 0;
 
@@ -20,7 +20,8 @@ int main(void){
         printf("%d ", V[i]);
     }
 
-    for(int i = 0; i < SIZE; i++){
+    do{
+        troca = 0;
         for(int j = 0; j < SIZE - 1; j++){
             contComparacao++;
             if(V[j]>V[j+1]){
@@ -28,9 +29,10 @@ int main(void){
                 V[j] = V[j+1];
                 V[j+1] = aux;
                 contTroca++;
+                troca=1;
             }
         }
-    }
+    }while(troca!=0);
 
     printf("\nArray ordenado: ");
     for( int i = 0; i < SIZE; i++){
